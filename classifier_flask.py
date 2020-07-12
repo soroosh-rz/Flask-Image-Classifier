@@ -2,10 +2,10 @@ from flask import Flask, request, jsonify, url_for, render_template
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import load_model
-from tensorflow.keras.applications import MobileNetV2
+from tensorflow.keras.applications import MobileNet
 from tensorflow.keras.preprocessing import image
-from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
-from tensorflow.keras.applications.mobilenet_v2 import decode_predictions
+from tensorflow.keras.applications.mobilenet import preprocess_input
+from tensorflow.keras.applications.mobilenet import decode_predictions
 from PIL import Image, ImageFile
 from io import BytesIO
 
@@ -22,7 +22,7 @@ def valid_file(filename):
 
 
 app = Flask(__name__)
-model = MobileNetV2(weights='imagenet', include_top=True)
+model = MobileNet(weights='imagenet', include_top=True)
 
 
 @app.route('/')
