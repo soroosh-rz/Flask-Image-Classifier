@@ -1,3 +1,4 @@
+setuptools>=41.0.0
 Flask==1.0.2
 tensorflow==2.0.0
 numpy==1.16.2
