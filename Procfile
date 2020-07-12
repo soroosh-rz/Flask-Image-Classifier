@@ -1,1 +1,1 @@
-web:gunicorn classifier_flask:app
+web: gunicorn classifier_flask:app
